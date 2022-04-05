@@ -58,17 +58,8 @@ class App extends React.Component {
   }
 
   render(){
-    return (
-    <div>
-      <div className='for_check'>
-        <h1>Search country</h1>
-        <a href="https://www.findmecity.com/" target="_blank">Find here id</a><br />
-        <input type="text" onChange={this.getInp} placeholder="woeid id" /> 
-        <button onClick={this.setSub}>Search</button>
-      </div>
-      <h1>For {this.state.city}</h1>
-      <div className='to_dis'>
-          {this.state.dataW.map(el =>{
+    
+    var resForCities = this.state.dataW.map(el =>{
             
             const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
             var check_day = el.applicable_date.split('-')
@@ -84,8 +75,18 @@ class App extends React.Component {
               <h3>Minimum temperature: {el.min_temp.toFixed(2)} °C</h3>
             </div><h3 className='for_days'>{final_res}</h3>
             </div>)
-          })}
-        </div>
+          })
+    
+    return (
+    <div>
+      <div className='for_check'>
+        <h1>Search country</h1>
+        <a href="https://www.findmecity.com/" target="_blank">Find here id</a><br />
+        <input type="text" onChange={this.getInp} placeholder="woeid id" /> 
+        <button onClick={this.setSub}>Search</button>
+      </div>
+      <h1>For {this.state.city}</h1>
+      <div className='to_dis'> {resForCities} </div>
     </div>)
   }
 
