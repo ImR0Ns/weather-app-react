@@ -1,5 +1,7 @@
 # Getting Started 
 
+--------- METAWEATHER API IS DOWN ---------
+
 App created for practice back-end!
 
 ## Available Scripts
