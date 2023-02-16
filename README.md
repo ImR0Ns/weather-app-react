@@ -1,3 +1,5 @@
+API DOWN 
+
 # Getting Started 
 
 --------- METAWEATHER API IS DOWN ---------
